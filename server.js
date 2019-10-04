@@ -47,9 +47,6 @@ app.get("/albums", function ( req, res ) {
    return res.status(200).json(search)
  })
 
-app.get('albun',function(req,res){
-  res.j
-})
 
 app.get("/albums/:albumId", function ( req, res ) {
  const {albumId} = req.params // filter by parameters
@@ -82,7 +79,6 @@ app.put("/albums/:albumId", function ( req, res ) {
    albumsData = change
     res.status(200).json(change)
 })
-
 
 
 app.listen(8585, () => {
