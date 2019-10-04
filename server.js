@@ -47,6 +47,10 @@ app.get("/albums", function ( req, res ) {
    return res.status(200).json(search)
  })
 
+app.get('albun',function(req,res){
+  res.j
+})
+
 app.get("/albums/:albumId", function ( req, res ) {
  const {albumId} = req.params // filter by parameters
  const search = albumsData.find(albu => albu.albumId == parseInt(albumId))
@@ -59,6 +63,7 @@ app.post("/albums", function( req, res) {
     albumsData.push(req.body)
     res.json(albumsData)
   });
+
 
 app.delete("/albums/:albumId", function ( req, res ){
     const { albumId } = req.params
